@@ -3,8 +3,8 @@ console.log('Loaded!');
 var img = document.getElementById('agent');
 var marginleft = 0;
 function moveRight() {
-  marginleft = marginleft + 1;
-  imge.style.marginleft = marginleft + 'px';
+  marginLeft = marginLeft + 1;
+  imge.style.marginLeft = marginLeft + 'px';
 }
 img.onclick = function(){
 var interval = setInterval(moveRight,50);
