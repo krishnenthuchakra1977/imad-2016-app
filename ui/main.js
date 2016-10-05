@@ -1,6 +1,6 @@
 console.log('Loaded!');
 //move the image
-var img = document.getElementById('agent');
+var img = document.getElementById('copy');
 var marginleft = 0;
 function moveRight() {
   marginLeft = marginLeft + 1;
