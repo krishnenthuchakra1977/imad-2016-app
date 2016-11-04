@@ -1,30 +1,27 @@
-body {
-    font-family: sans-serif;
-    background-color: lightgrey;
-    margin-top: 75px;
+/*CSS File For Sign-Up webpage*/
+#body-color{
+background-color:#6699CC;
+}
+#Sign-Up{
+background-image:url('sign-up.png');
+background-size:500px 500px;
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-position:center;
+margin-top:150px;
+margin-bottom:150px;
+margin-right:150px;
+margin-left:450px;
+padding:9px 35px;
+}
+#button{
+border-radius:10px;
+width:100px;
+height:40px;
+background:#FF00FF;
+font-weight:bold;
+font-size:20px;
 }
 
-.center {
-    text-align: center;
-}
 
-.text-big {
-    font-size: 300%;
-}
-
-.bold {
-    font-weight: bold;
-}
-
-.img-medium {
-    height: 200px;
-}
-.container {
-		max-width: 800px;
-		margin: 0 auto;
-		color: #4a4a4a;
-		font-family: sans-serif;
-		padding-top: 60px;
-		padding-left: 20px;
-		padding-right: 20px;
-		}
+Read more: http://mrbool.com/how-to-create-a-sign-up-form-registration-with-php-and-mysql/28675#ixzz2ssg9bh6a
