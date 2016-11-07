@@ -48,7 +48,7 @@ submit.onclick = function () {
       }
     }
     //not done yet
- };
+ }
 }; 
   //make the request
   var nameInput = document.getElementById('name');
