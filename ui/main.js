@@ -13,7 +13,7 @@ button.onclick = function()
     //Take some action
     if(request.status === 200)
     {
-      var counter = request.responceText;
+      var counter = request.responseText;
       var span = document.getElementById('count');
       span.innerHTML = counter.toString();
     }
@@ -44,7 +44,7 @@ submit.onclick = function () {
           list += '<li>' + names[i] + '</li>';
         }
         var ul = document.getElementById('namelist');
-        ul.innerHTMl = list;
+        ul.innerHTML = list;
       }
     }
     //not done yet
