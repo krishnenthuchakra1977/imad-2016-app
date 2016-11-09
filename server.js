@@ -10,6 +10,30 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+app.get('/ui/about.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'about.html'));
+});
+
+app.get('/ui/404.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', '404.html'));
+});
+
+app.get('/ui/blog.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'blog.html'));
+});
+
+app.get('/ui/contact.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'contact.html'));
+});
+
+app.get('/ui/single.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'single.html'));
+});
+
+app.get('/ui/trainers.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'trainer.html'));
+});
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
