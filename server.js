@@ -18,6 +18,9 @@ app.get('/single.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'single.html'));
 });
 
+app.get('/trainers.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'trainers.html'));
+});
 
 app.get('/ui/404.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', '404.html'));
@@ -29,10 +32,6 @@ app.get('/ui/blog.html', function (req, res) {
 
 app.get('/ui/contact.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'contact.html'));
-});
-
-app.get('/ui/single.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'single.html'));
 });
 
 app.get('/ui/trainers.html', function (req, res) {
