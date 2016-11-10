@@ -38,26 +38,12 @@ app.get('/ui/trainers.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'trainer.html'));
 });
 
-app.get('/ui/style.css', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'style.css'));
-});
-
 app.get('/ui/copy.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'copy.jpg'));
 });
 
-app.get('/ui/main.js', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'main.js'));
-});
-
-
-
 app.get('/ui/slide3.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'slide3.png'));
-});
-
-app.get('/ui/bootstrap.css', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'bootstrap.css'));
 });
 
 app.get('/ui/ab.jpg', function (req, res) {
@@ -172,6 +158,49 @@ app.get('/ui/t3.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 't3.jpg'));
 });
 
+app.get('/ui/style.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'style.css'));
+});
+
+app.get('/ui/bootstrap.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'bootstrap.css'));
+});
+
+app.get('/ui/main.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'main.js'));
+});
+
+app.get('/ui/animate.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'animate.css'));
+});
+
+app.get('/ui/component.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'component.css'));
+});
+
+app.get('/ui/jquery.cbpFWSlider.min.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'jquery.cbpFWSlider.min.js'));
+});
+
+app.get('/ui/jquery.min.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'jquery.min.js'));
+});
+
+app.get('/ui/modernizr.custom.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'modernizr.custom.js'));
+});
+
+app.get('/ui/owl.carousel.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'owl.carousel.js'));
+});
+
+app.get('/ui/owl.carousel.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'owl.carousel.css'));
+});
+
+app.get('/ui/wow.min.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'wow.min.js'));
+});
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
