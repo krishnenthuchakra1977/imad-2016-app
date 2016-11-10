@@ -22,20 +22,16 @@ app.get('/trainers.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'trainers.html'));
 });
 
-app.get('/ui/404.html', function (req, res) {
+app.get('/404.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', '404.html'));
 });
 
-app.get('/ui/blog.html', function (req, res) {
+app.get('/blog.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'blog.html'));
 });
 
-app.get('/ui/contact.html', function (req, res) {
+app.get('/contact.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'contact.html'));
-});
-
-app.get('/ui/trainers.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'trainer.html'));
 });
 
 app.get('/ui/copy.jpg', function (req, res) {
