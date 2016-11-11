@@ -1,31 +1,165 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
     <head>
         <link href="/ui/style.css" rel="stylesheet" />
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Krish - Profile Page</title>
     </head>
-    <body>
-        <div class="container">
-            <div class="center">
-                <img id='madi' src="https://pbs.twimg.com/profile_images/794285789240623104/Cyio02cd_400x400.jpg" class="img-medium"/>
+    <!-- <body style="background-image:url(https://raw.githubusercontent.com/krish88077/imad-2016-app/master/ui/bg-for-imad2.jpg)"> -->
+  <body>
+        
+ 
+ <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo right">Krish</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li class="active"><a href="index.html">Portfolio</a></li>
+        <li><a href="Projects.html">Projects</a></li>
+        <li><a href="Achievements.html">Achievements</a></li>
+        <li><a href="Trainings.html">Trainings</a></li>
+      </ul>
+    </div>
+  </nav>
+ 
+ 
+        <div class="container"><br>
+           <div class="row">
+            <div class="col s12 m3">
+             <div class="card-panel z-depth-5"> 
+             <img src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-0/s526x395/14702283_1202896873116038_6141757014064308338_n.jpg?oh=3852eee1f557680f9314db66e4c3ae7c&oe=58AC27C0" class="responsive-img img-medium"><br>
+             
+             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <button class="btn-floating btn-large waves-effect waves-light z-depth-4 " type="submit" id="counter" name="action">
+                      <i class="material-icons right">thumb_up</i>
+                      </button>
+                      <span id="count">0</span>
+             </div>
             </div>
-            <h3>About Me</h3>
-            <div>
-                Hi. My name is Tanmai Gopal<br/>
-                I work at Hasura
+            
+            <div class="col s12 m9">
+                 <div class="card-panel z-depth-4">
+                     <h5 class="  cyan-text">Personal</h5>
+                     <p class="light">Hi, This is Krish</p>
+                     <h5 class=" cyan-text">Professional</h5>
+                     <p class="light ">I'm a student</p>
+                     <h5 class=" cyan-text">Login to unlock awesome features</h5>
+                     <input type = "text" id= "username" placeholder= "Username" />
+                     <input type = "password" id= "password" />
+                     <input class="btn" type = "submit" value = "submit" id= "submit_btn">
+                     
+                     <div id="login_area">
+                            <center>Loading login status...</center>
+                    </div>
+                    
+                    <hr/>
+                    
+                    <h5 class=" cyan-text">My Articles</h5>
+                    <div id="articles">
+                        <center>Loading articles...</center>
+                    </div>
+                     
+                     
+                </div>
             </div>
-            <hr/>
-            <div id="login_area">
-                <center>Loading login status...</center>
             </div>
-            <hr/>
-            <h3>My Articles</h3>
-            <div id="articles">
-                <center>Loading articles...</center>
+            
+             <div class="row">
+                <div class="col s12">
+                  <ul class="collapsible popout" data-collapsible="accordion">
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">subject</i>Academic Profile</div>
+                      <div class="collapsible-body white card">
+                          <table class="striped">
+                            <thead>
+                              <tr>
+                                  <th data-field="id">S.no</th>
+                                  <th data-field="name">Name of Course</th>
+                                  <th data-field="price">Name of the Institution</th>
+                                <th data-field="price">Percentage Obtained</th>
+                              </tr>
+                            </thead>
+                    
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>B.E(ECE)</td>
+                                <td>Akshaya College Of Engineering And Technology, Coimbatore -641004</td>
+                        <td>7.55</td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td>Diploma</td>
+                                <td>PSG Polytechnic college, Coimbatore- 641004</td>
+                        <td>86.11%</td>                              
+                       </tr>
+                              <tr>
+                                <td>3</td>
+                                <td>SSLC</td>
+                                <td>Srinivasa Vidhyalaya Matriculation Higher Secondary School, Udumalpet- 642154</td>
+                        <td>91%</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">airplay</i>Computer Proficiency</div>
+                      <div class="collapsible-body white card">
+                          <p class="center ">
+                          PACKAGES : MS-Office, C, C++.<br>
+                          PLATFORMS USED : Windows XP, Windows 7, Windows 8, Windows 8.1.<br>
+                          SOFTWARE KNOWN : Multisim, LAB View, PSPICE, Proteus, Rhino 3D, Code composer studio, Motosim, Adobe Packages, Visual studio, Android studio, Eclipse.<br>
+                          </p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">whatshot</i>Area of Interest</div>
+                      <div class="collapsible-body white card">
+                          <p class="center ">
+                          Lab VIEW<br>
+                          Android application development<br>
+                          Programming languages<br>
+                          Multimedia<br>
+        Hardware servicing
+                      
+                      </div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">whatshot</i>Strength</div>
+                      <div class="collapsible-body white card">
+                          <p class="center ">
+                          Self-confidence<br>
+                          Positive thinking,<br>
+                          Team management
+                          </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
             </div>
-            <div class="footer">
+    
+    
+    
+        <div class="footer-copyright">
+            <div class="container">
+            © 2016 Copyright To Krish
+            
             </div>
         </div>
-        <script type="text/javascript" src="/ui/main.js">
+        
+    
+             
+
+        <script type="text/javascript" src="/ui/main.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+        <script>
+          $(document).ready(function(){
+            $('.collapsible').collapsible();
+          });
         </script>
+        
+        
     </body>
 </html>
