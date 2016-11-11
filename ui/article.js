@@ -53,7 +53,7 @@ function loadLogin () {
         }
     };
     
-    request.open('GET', '/check-login', true);
+    request.open('GET', 'http://krish88077.imad.hasura-app.io/check-login', true);
     request.send(null);
 }
 
@@ -90,7 +90,7 @@ function loadComments () {
         }
     };
     
-    request.open('GET', '/get-comments/' + currentArticleTitle, true);
+    request.open('GET', 'http://krish88077.imad.hasura-app.io/get-comments/' + currentArticleTitle, true);
     request.send(null);
 }
 
