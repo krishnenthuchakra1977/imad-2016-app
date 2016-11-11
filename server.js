@@ -68,7 +68,23 @@ function createTemplate (data) {
 }
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+  res.sendFile(path.join(__dirname, 'ui', 'indexone.html'));
+});
+
+app.get('/ui/animate.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'animate.css'));
+});
+app.get('/ui/bootstrap.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'bootstrap.css'));
+});
+app.get('/ui/component', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'component.css'));
+});
+app.get('/ui/style.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'style.css'));
+});
+app.get('/ui/owl.carousel.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'owl.carousel.css'));
 });
 
 
