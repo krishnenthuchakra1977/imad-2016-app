@@ -1,7 +1,6 @@
-
 function loadLoginForm () {
     var loginHtml = `
-        <h3>Login/Register to unlock awesome features</h3>
+        <h5 class=" cyan-text">Login/Register to unlock awesome features</h5>
         <input type="text" id="username" placeholder="username" />
         <input type="password" id="password" />
         <br/><br/>
@@ -41,7 +40,7 @@ function loadLoginForm () {
         var password = document.getElementById('password').value;
         console.log(username);
         console.log(password);
-        request.open('POST', '/login', true);
+        request.open('POST', 'http://krish88077.imad.hasura-app.io/login', true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({username: username, password: password}));  
         submit.value = 'Logging in...';
@@ -72,7 +71,7 @@ function loadLoginForm () {
         var password = document.getElementById('password').value;
         console.log(username);
         console.log(password);
-        request.open('POST', '/create-user', true);
+        request.open('POST', 'http://krish88077.imad.hasura-app.io/create-user', true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({username: username, password: password}));  
         register.value = 'Registering...';
@@ -101,7 +100,7 @@ function loadLogin () {
         }
     };
     
-    request.open('GET', '/check-login', true);
+    request.open('GET', 'http://krish88077.imad.hasura-app.io/check-login', true);
     request.send(null);
 }
 
@@ -119,15 +118,15 @@ function loadArticles () {
                     <a href="/articles/${articleData[i].title}">${articleData[i].heading}</a>
                     (${articleData[i].date.split('T')[0]})</li>`;
                 }
-                content += "</ul>";
+                content += "</ul>"
                 articles.innerHTML = content;
             } else {
-                articles.innerHTML('Oops! Could not load all articles!');
+                articles.innerHTML('Oops! Could not load all articles!')
             }
         }
     };
     
-    request.open('GET', '/get-articles', true);
+    request.open('GET', 'http://krish88077.imad.hasura-app.io/get-articles', true);
     request.send(null);
 }
 
