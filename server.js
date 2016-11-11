@@ -7,8 +7,8 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 
 var config = {
-    user: 'krishnenthuchakra1977',
-    database: 'krishnenthuchakra1977',
+    user: 'coco98',
+    database: 'coco98',
     host: 'db.imad.hasura-app.io',
     port: '5432',
     password: process.env.DB_PASSWORD
@@ -19,68 +19,58 @@ app.use(morgan('combined'));
 app.use(bodyParser.json());
 app.use(session({
     secret: 'someRandomSecretValue',
-    cookie: {maxAge: 1000*60*60*24*30}
-    
+    cookie: { maxAge: 1000 * 60 * 60 * 24 * 30}
 }));
-
 
 function createTemplate (data) {
     var title = data.title;
     var date = data.date;
     var heading = data.heading;
     var content = data.content;
-    var htmltemplate = `
+    
+    var htmlTemplate = `
     <html>
-        <head>
-            <title>
-                ${title}
-            </title>
-            
-            <meta name = "viewport" content = "width=device-width, initial -scale=1"/>
-            <link href="/ui/style.css" rel="stylesheet" />
-            
-            
-        </head>
-        
-        <body>
-            <div class="container">
-                    <div>
-                        <a href="/">Home</a>
-                    </div>
-                    <hr/>
-                    <h3>
-                        ${heading}
-                    </h3>
-                    <div>
-                        ${date.toDateString()}
-                    </div>
-                    <div>
-                       ${content}
-                    </div>
-                    <hr/>
-                    <h4>Comments</h4>
-                    <div id="comment_form">
-                    
-                        </div>
-                    <div id="comments">
-                        <center>Loading comments...</center>
-                    </div>
-            </div>
-            
-            <script type="text/javascript" src="/ui/article.js"></script>
-            
-        </body>
-              <script type="text/javascript" src="/ui/article.js"></script>
-            
-        
+      <head>
+          <title>
+              ${title}
+          </title>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link href="/ui/style.css" rel="stylesheet" />
+      </head> 
+      <body>
+          <div class="container">
+              <div>
+                  <a href="/">Home</a>
+              </div>
+              <hr/>
+              <h3>
+                  ${heading}
+              </h3>
+              <div>
+                  ${date.toDateString()}
+              </div>
+              <div>
+                ${content}
+              </div>
+              <hr/>
+              <h4>Comments</h4>
+              <div id="comment_form">
+              </div>
+              <div id="comments">
+                <center>Loading comments...</center>
+              </div>
+          </div>
+          <script type="text/javascript" src="/ui/article.js"></script>
+      </body>
     </html>
     `;
-    return htmltemplate;
+    return htmlTemplate;
 }
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+
 
 function hash (input, salt) {
     // How do we create a hash?
@@ -164,19 +154,7 @@ app.get('/logout', function (req, res) {
    res.send('<html><body>Logged out!<br/><br/><a href="/">Back to home</a></body></html>');
 });
 
-var pool =  new Pool(config);
-app.get('/test-db', function (req,res) {
-    //make a request
-    // return response with results
-    pool.query('SELECT * FROM test', function(err,result){
-        if (err){
-            res.status(500).send(err.toString());
-        } else{
-            res.send(JSON.stringify(result.rows));
-        }
-        
-    });
-});
+var pool = new Pool(config);
 
 app.get('/get-articles', function (req, res) {
    // make a select request
@@ -189,7 +167,6 @@ app.get('/get-articles', function (req, res) {
       }
    });
 });
-
 
 app.get('/get-comments/:articleName', function (req, res) {
    // make a select request
@@ -223,7 +200,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
                             if (err) {
                                 res.status(500).send(err.toString());
                             } else {
-                                res.status(200).send('Comment inserted!');
+                                res.status(200).send('Comment inserted!')
                             }
                         });
                 }
@@ -233,24 +210,6 @@ app.post('/submit-comment/:articleName', function (req, res) {
         res.status(403).send('Only logged in users can comment');
     }
 });
-
-
-var counter = 0;
-app.get('/counter', function (req, res) {
-  counter =  counter + 1;
-  res.send(counter.toString());
-});
-
-var names = [];
-app.get('/submit-name', function (req, res) { // URL:/ submit-name?name=xxxx
-    //get the name from the request
-    var name= req.query.name; //todo
-    names.push(name);
-    //JSON Javascript object notation
-    res.send(JSON.stringify(names));
-    
-});
-
 
 app.get('/articles/:articleName', function (req, res) {
   // SELECT * FROM article WHERE title = '\'; DELETE WHERE a = \'asdf'
@@ -266,35 +225,6 @@ app.get('/articles/:articleName', function (req, res) {
         }
     }
   });
-});
-
-
-app.get('/index.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
-
-app.get('/Projects.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'Projects.html'));
-});
-
-app.get('/Achievements.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'Achievements.html'));
-});
-
-app.get('/Trainings.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'Trainings.html'));
-});
-
-app.get('/ui/style.css', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'style.css'));
-});
-
-app.get('/ui/main.js', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'main.js'));
-});
-
-app.get('/ui/copy.jpg', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'copy.jpg'));
 });
 
 app.get('/ui/:fileName', function (req, res) {
