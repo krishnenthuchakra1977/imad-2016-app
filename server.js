@@ -113,7 +113,7 @@ var htmlTemplate = `
 		  	   	<div class="blog_box">
 				 <div class="blog_grid">
 				  <h3 class="wow rollIn animated" data-wow-delay="0.4s">${heading}</h3>
-				  <a href="single.html"><img src="images/blog1.jpg" class="img-responsive" alt=""/></a>
+				  <a href="single.html"><img src="${image}" class="img-responsive" alt=""/></a>
 				  <div class="singe_desc">
 				                    ${content}
 					<div class="comments">
