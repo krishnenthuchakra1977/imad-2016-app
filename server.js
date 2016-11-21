@@ -67,10 +67,11 @@ var htmlTemplate = `
 						<nav class="navigation">
 						<ul class="cl-effect-16">
 							<li><a  href="index.html">Home</a></li>
-							
+                                                         <li><a  href="trainers.html">Trainer Profile</a></li>
+
 							<li><a class="active" href="blog.html">Blog</a></li>
 							
-							<li><a  href="trainers.html">Trainer Profile</a></li>
+				
 						<ul>
 					</nav>		
 					</div>
