@@ -38,7 +38,7 @@ function createTemplate (data) {
           <link href="/ui/style.css" rel="stylesheet" />
       </head> 
       <body>
-<img id='madi' src="https://pbs.twimg.com/profile_images/794285789240623104/Cyio02cd_400x400.jpg" class="img-medium"/>
+
           <div class="container">
               <div>
                   <a href="/">Home</a>
