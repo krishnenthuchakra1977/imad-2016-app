@@ -3,12 +3,12 @@ function loadLoginForm () {
     var loginHtml = `
       <div class="col-md-3">
 			      <div class="form-group">
-                          <label for="username">Username:</label>
-                           <input type="text" class="form-control" id="username">
+                          <label>Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter Your Username" required>
                  </div>
             	<div class="form-group">
-                           <label for="password">Password:</label>
-      <input type="password" class="form-control" id="password">
+                          <label>Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password" required>
                 </div>
 				<input type="submit" class="btn btn-danger id="login_btn" value="Login"/>
 			<input type="submit" class="btn btn-danger id="register_btn" value="Register" />
