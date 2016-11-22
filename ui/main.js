@@ -2,6 +2,7 @@
 function loadLoginForm () {
     var loginHtml = `
         <div class="col-md-3">
+  <link href="/ui/style.css" rel="stylesheet" />
 			      <div class="form-group">
                           <label for="usr">Username:</label>
                            <input type="text" class="form-control" id="usr">
