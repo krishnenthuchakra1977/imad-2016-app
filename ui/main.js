@@ -4,11 +4,11 @@ function loadLoginForm () {
       <div class="col-md-3">
 			      <div class="form-group">
                           <label>Username</label>
-                <input type="text" class="form-control" id="username" placeholder="Enter Your Username" required>
+                <input type="text"  id="username" placeholder="Enter Your Username" />
                  </div>
             	<div class="form-group">
                           <label>Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Password" required>
+                <input type="password" id="password" placeholder="Password" />
                 </div>
 				<input type="submit" class="btn btn-danger id="login_btn" value="Login"/>
 			<input type="submit" class="btn btn-danger id="register_btn" value="Register" />
