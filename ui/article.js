@@ -61,7 +61,7 @@ function loadLogin () {
         }
     };
     
-    request.open('GET', '/check-login', true);
+    request.open('GET', 'articles/check-login', true);
     request.send(null);
 }
 
