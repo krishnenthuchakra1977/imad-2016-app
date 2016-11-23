@@ -1,7 +1,5 @@
-
 function loadLoginForm () {
-    var loginHtml = `
-      <h3>Login/Register Here for Posting Comments on the Articles!</h3>
+         var loginHtml = ` <h3>Login/Register Here for Posting Comments on the Articles!</h3>
         <div class="row control-group">
             <div class="form-group col-xs-12 floating-label-form-group controls">
               <label>Username</label>
@@ -17,8 +15,9 @@ function loadLoginForm () {
         <br/>
         <input type="submit" class="btn btn-default" id="login_btn" value="Login" />
         <input type="submit" class="btn btn-default" id="register_btn" value="Register" />
-
         `;
+             
+        
     document.getElementById('login_area').innerHTML = loginHtml;
     
     // Submit username/password to login
@@ -50,8 +49,10 @@ function loadLoginForm () {
         // Make the request
         var username = document.getElementById('username').value;
         var password = document.getElementById('password').value;
-        console.log(username);
-        console.log(password);
+        if (username === '' || password === '') {
+        alert("Username/Password field can't be left empty");
+        return;
+    }
         request.open('POST', '/login', true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({username: username, password: password}));  
@@ -81,8 +82,10 @@ function loadLoginForm () {
         // Make the request
         var username = document.getElementById('username').value;
         var password = document.getElementById('password').value;
-        console.log(username);
-        console.log(password);
+     if (username === '' || password === '') {
+        alert("Username/Password field can't be left empty");
+        return;
+    }
         request.open('POST', '/create-user', true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({username: username, password: password}));  
@@ -91,11 +94,19 @@ function loadLoginForm () {
     };
 }
 
+function escapeHTML (text)
+{
+    var $text = document.createTextNode(text);
+    var $div = document.createElement('div');
+    $div.appendChild($text);
+    return $div.innerHTML;
+}
+
 function loadLoggedInUser (username) {
     var loginArea = document.getElementById('login_area');
     loginArea.innerHTML = `
-        <h3> Hi <i>${username}</i></h3>
-        <a href="/logout">Logout</a>
+        <h3> Hi!</h3> <p style="color:#ff0282";font-weight:bold>${escapeHTML(username).toUpperCase()}</p>
+        <a href="/logout"><input type="submit" class="btn btn-default" id="logout" value="Logout" /></a>
     `;
 }
 
@@ -113,6 +124,21 @@ function loadLogin () {
     };
     
     request.open('GET', '/check-login', true);
+    request.send(null);
+}
+//site visit counter
+function getCounter(){
+var request = new XMLHttpRequest();
+request.onreadystatechange = function() {
+    if(request.readyState === XMLHttpRequest.DONE) {
+        if (request.status === 200) {
+            var counter = request.responseText;
+            var span = document.getElementById('count');
+            span.innerHTML = counter.toString();
+        }
+    }
+};
+ request.open('GET', '/counter', true);
     request.send(null);
 }
 
@@ -142,7 +168,7 @@ function loadArticles () {
                 </div>
                 </div>`;
                 }
-                articles.innerHTML = content;
+               articles.innerHTML = content;
             } else {
                 articles.innerHTML('Oops! Could not load all articles!')
             }
@@ -153,7 +179,7 @@ function loadArticles () {
     request.send(null);
 }
 
-
+getCounter();
 // The first thing to do is to check if the user is logged in!
 loadLogin();
 
