@@ -282,6 +282,13 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
+//counter code
+var counter = 0;
+app.get('/counter',function(req,res){
+    counter = counter+1;
+   res.send(counter.toString()); 
+});
+
 function hash (input, salt) {
     // How do we create a hash?
     var hashed = crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
