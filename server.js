@@ -27,7 +27,9 @@ function createTemplate (data) {
     var date = data.date;
     var heading = data.heading;
     var content = data.content;
-    var image = data.image;	
+    var image = data.image;
+    var subtitle = data.subtitle;
+    var author = data.author;	
     
     
              
