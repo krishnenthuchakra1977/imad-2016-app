@@ -98,7 +98,7 @@ function loadComments () {
         }
     };
     
-    request.open('GET', '/get-comments/' + currentArticleTitle, true);
+    request.open('GET', 'articles/get-comments/' + currentArticleTitle, true);
     request.send(null);
 }
 
