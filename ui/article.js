@@ -1,4 +1,3 @@
-// Eg: coco98.imad.hasura-app.io/articles/article-one will result in article-one
 var currentArticleTitle = window.location.pathname.split('/')[2];
 
 function loadCommentForm () {
@@ -36,9 +35,12 @@ function loadCommentForm () {
                 submit.value = 'Submit';
           }
         };
-        
-        // Make the request
+          // Make the request
         var comment = document.getElementById('comment_text').value;
+        if (comment ==='') {
+        alert("Comments field can't be left empty");
+        return;
+    }
         request.open('POST', '/submit-comment/' + currentArticleTitle, true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({comment: comment}));  
@@ -81,10 +83,10 @@ function loadComments () {
                 var commentsData = JSON.parse(this.responseText);
                 for (var i=0; i< commentsData.length; i++) {
                     var time = new Date(commentsData[i].timestamp);
-                    content += `<div class="comment">
-                        <p>${escapeHTML(commentsData[i].comment)}</p>
+                   content += `<div class="comment">
+                        <p style="color:#550C73">${escapeHTML(commentsData[i].comment)}</p>
                         <div class="commenter">
-                            ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
+                            <div style='color:#04d99d;font-weight:bold;font-variant: small-caps'>${escapeHTML(commentsData[i].username)}</div> - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()}
                         </div>
                     </div>`;
                 }
