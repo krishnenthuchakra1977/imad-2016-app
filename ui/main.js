@@ -157,7 +157,7 @@ function loadArticles () {
                      content += `<div class="container">
                                 <div class="row">
                                <div class="post-preview">
-                                <a href="/${articleData[i].title}">
+                                <a href="articles/${articleData[i].title}">
                                 <h2 class="post-title">
                                      ${articleData[i].heading}
                                 </h2>
@@ -165,7 +165,7 @@ function loadArticles () {
                                      ${articleData[i].subtitle}
                                  </h3>
                                 </a>
-                    <p class="post-meta">Posted by <a href="/about.html">${articleData[i].author}</a> on (${articleData[i].date.split('T')[0]})</p>
+                    <p class="post-meta">Posted by <a href="/trainers.html">${articleData[i].author}</a> on (${articleData[i].date.split('T')[0]})</p>
                 </div>
                 </div>
                 </div>`;
