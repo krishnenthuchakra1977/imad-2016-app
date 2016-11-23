@@ -3,15 +3,16 @@ var currentArticleTitle = window.location.pathname.split('/')[2];
 
 function loadCommentForm () {
     var commentFormHtml = `
-       <hr /><div class="row control-group">
+       <div class="row control-group">
             <div class="form-group col-xs-12 floating-label-form-group controls">
               <label>Write your Comment</label>
-        <textarea id="comment_text" rows="4" cols="80" class="form-control" placeholder="Enter your comment here..." required></textarea>
-		<br />
-		 <input type="submit" class="btn btn-success" id="submit" value="Submit" />
+        <textarea id="comment_text" rows="4" cols="80" class="form-control" placeholder="Enter your comment here..." required>
+        </textarea>
         </div>
         </div>
-        <br />
+        <br/>
+        <input type="submit" class="btn btn-default" id="submit" value="Submit" />
+        <br/>
         `;
     document.getElementById('comment_form').innerHTML = commentFormHtml;
     
