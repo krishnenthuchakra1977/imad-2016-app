@@ -139,20 +139,6 @@ request.onreadystatechange = function() {
         }
     }
 };
-
-  //site visit trainer
-function getCountered(){
-var request = new XMLHttpRequest();
-request.onreadystatechange = function() {
-    if(request.readyState === XMLHttpRequest.DONE) {
-        if (request.status === 200) {
-            var countered = request.responseText;
-            var spanner = document.getElementById('countw');
-            spanner.innerHTML = countered.toString();
-        }
-    }
-};
-        
                                          
  request.open('GET', '/counter', true);
     request.send(null);
