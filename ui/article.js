@@ -90,6 +90,7 @@ function loadComments () {
                             <div style='color:#04d99d;font-weight:bold;font-variant: small-caps'>${escapeHTML(commentsData[i].username)}</div> - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()}
 <br>
                         </div>
+<br>
                     </div>`;
                 }
                 comments.innerHTML = content;
