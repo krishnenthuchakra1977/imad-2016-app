@@ -435,14 +435,6 @@ app.get('/counter',function(req,res){
    res.send(counter.toString()); 
 });
 
-//counter trainer
-
-var countered = 0;
-app.get('/countered',function(req,res){
-    countered = countered+1;
-   res.send(countered.toString()); 
-});
-
 app.get('/:articleName', function (req, res) {
   // SELECT * FROM article WHERE title = '\'; DELETE WHERE a = \'asdf'
   pool.query("SELECT * FROM article WHERE title = $1", [req.params.articleName], function (err, result) {
