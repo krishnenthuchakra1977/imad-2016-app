@@ -147,7 +147,7 @@ request.onreadystatechange = function() {
     if(request.readyState === XMLHttpRequest.DONE) {
         if (request.status === 200) {
             var countered = request.responseText;
-            var spanner = document.getElementById('count');
+            var spanner = document.getElementById('countw');
             span.innerHTML = counter.toString();
         }
     }
