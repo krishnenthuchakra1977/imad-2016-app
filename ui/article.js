@@ -42,7 +42,7 @@ function loadCommentForm () {
         alert("Comments field can't be left empty");
         return;
     }
-        request.open('POST', 'articles/submit-comment/' + currentArticleTitle, true);
+        request.open('POST', '/submit-comment/' + currentArticleTitle, true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({comment: comment}));  
         submit.value = 'Submitting...';
@@ -61,7 +61,7 @@ function loadLogin () {
         }
     };
     
-    request.open('GET', 'articles/check-login', true);
+    request.open('GET', '/check-login', true);
     request.send(null);
 }
 
@@ -98,7 +98,7 @@ function loadComments () {
         }
     };
     
-    request.open('GET', 'articles/get-comments/' + currentArticleTitle, true);
+    request.open('GET', '/get-comments/' + currentArticleTitle, true);
     request.send(null);
 }
 
