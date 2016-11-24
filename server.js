@@ -254,12 +254,12 @@ var htmlTemplate = `
 				</div>
 				<div class="copy">
 						<p>&copy; 2017 All Rights Reserved. Design by <a href="http://krishnenthuchakra1977.esy.es/">krishnenthu Chakra</a> </p>
-<p class="copyright text-muted">This Page has been visited <span id="count"> </span> times since inception!</p>
+
 		        </div>
 			</div>
 		</div>
 	<script type="text/javascript" src="/ui/article.js"></script>
-<script type="text/javascript" src="/ui/main.js"></script>
+
 </body>
 </html>
     `;
