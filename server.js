@@ -428,10 +428,19 @@ app.post('/submit-comment/:articleName', function (req, res) {
     }
 });
 // counter
+
 var counter = 0;
 app.get('/counter',function(req,res){
     counter = counter+1;
    res.send(counter.toString()); 
+});
+
+//counter trainer
+
+var countered = 0;
+app.get('/countered',function(req,res){
+    countered = countered+1;
+   res.send(countered.toString()); 
 });
 
 app.get('/:articleName', function (req, res) {
