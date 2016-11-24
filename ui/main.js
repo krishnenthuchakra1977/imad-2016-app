@@ -140,6 +140,44 @@ request.onreadystatechange = function() {
     }
 };
 
+  //site visit trainer
+function getCountered(){
+var request = new XMLHttpRequest();
+request.onreadystatechange = function() {
+    if(request.readyState === XMLHttpRequest.DONE) {
+        if (request.status === 200) {
+            var countered = request.responseText;
+            var spanner = document.getElementById('count');
+            span.innerHTML = counter.toString();
+        }
+    }
+};
+         
+         //site visit blog
+         function getCounter(){
+var request = new XMLHttpRequest();
+request.onreadystatechange = function() {
+    if(request.readyState === XMLHttpRequest.DONE) {
+        if (request.status === 200) {
+            var counter = request.responseText;
+            var span = document.getElementById('count');
+            span.innerHTML = counter.toString();
+        }
+    }
+};
+                  //site visit article
+                  function getCounter(){
+var request = new XMLHttpRequest();
+request.onreadystatechange = function() {
+    if(request.readyState === XMLHttpRequest.DONE) {
+        if (request.status === 200) {
+            var counter = request.responseText;
+            var span = document.getElementById('count');
+            span.innerHTML = counter.toString();
+        }
+    }
+};
+                           
 
  request.open('GET', '/counter', true);
     request.send(null);
