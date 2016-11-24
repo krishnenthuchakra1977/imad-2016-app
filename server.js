@@ -136,7 +136,8 @@ var htmlTemplate = `
 				 <br><br>
 				 <hr/>
 
-              <h4>Comments</h4>
+              <h4>Comments :</h4>
+<br>
               <div id="comment_form"></div>
 <hr>
 <br>
