@@ -104,7 +104,7 @@ function escapeHTML (text)
 function loadLoggedInUser (username) {
     var loginArea = document.getElementById('login_area');
     loginArea.innerHTML = `
-        <h3> Hi!</h3> <p style="color:#ff0282";font-weight:bold>${escapeHTML(username).toUpperCase()}</p>
+        <h3> Hi!</h3> <p style="color:#ff0282";font-weight:bold>${escapeHTML(username).toUpperCase()}</p><hr>
         <a href="/logout"><input type="submit" class="btn btn-danger form-button" id="logout" value="Logout" /></a>
     `;
 }
