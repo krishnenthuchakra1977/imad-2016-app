@@ -14,7 +14,7 @@ function loadLoginForm () {
         </div>
         <br/>
         <input type="submit" class="btn btn-danger form-button" id="login_btn" value="Login" />
-        <input type="submit" class="btn btn-primary form-button" id="register_btn" value="Register" />
+        <input type="submit" class="btn btn-danger form-button" id="register_btn" value="Register" />
         `;
              
     document.getElementById('login_area').innerHTML = loginHtml;
@@ -166,7 +166,7 @@ function loadArticles () {
                                  </h3>
                                 </a>
                     <p class="post-meta">Posted by <a href="/about.html">${articleData[i].author}</a> on (${articleData[i].date.split('T')[0]})</p>
-                </div>
+         <hr>       </div>
                 </div>
                 </div>`;
                 }
