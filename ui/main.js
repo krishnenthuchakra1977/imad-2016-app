@@ -13,7 +13,7 @@ function loadLoginForm () {
             </div>
         </div>
         <br/>
-        <input type="submit" class="btn btn-default" id="login_btn" value="Login" />
+        <input type="submit" class="btn btn-danger form-button" id="login_btn" value="Login" />
         <input type="submit" class="btn btn-primary form-button" id="register_btn" value="Register" />
         `;
              
