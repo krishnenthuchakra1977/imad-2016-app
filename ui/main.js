@@ -1,5 +1,5 @@
 function loadLoginForm () {
-         var loginHtml = ` <h3>Login/Register Here for Posting Comments on the Articles!</h3>
+         var loginHtml = ` <h3>Login/Register Here For Posting Comments On The Articles!</h3>
         <div class="row control-group">
             <div class="form-group col-xs-12 floating-label-form-group controls">
               <label>Username</label>
@@ -105,7 +105,7 @@ function loadLoggedInUser (username) {
     var loginArea = document.getElementById('login_area');
     loginArea.innerHTML = `
         <h3> Hi!</h3> <p style="color:#ff0282";font-weight:bold>${escapeHTML(username).toUpperCase()}</p>
-        <a href="/logout"><input type="submit" class="btn btn-default" id="logout" value="Logout" /></a>
+        <a href="/logout"><input type="submit" class="btn btn-danger form-button" id="logout" value="Logout" /></a>
     `;
 }
 
