@@ -149,6 +149,15 @@ var htmlTemplate = `
 			   </div>
 			   
 			   <div class="col-md-4 ">
+ <div class="categories">
+											<h4 class="wow fadeInRight animated" data-wow-delay="0.4s">My Articles</h4>
+											<ul class="category">
+												<hr>
+											<div id="articles">
+													<center>Loading articles...</center></div>
+											</ul>
+										</div>
+				   
 								<div class="categories">
 											<h4 class="wow fadeInRight animated" data-wow-delay="0.4s">Categories</h4>
 											<ul class="category">
