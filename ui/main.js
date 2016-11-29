@@ -199,6 +199,7 @@ function loadArticles () {
         
     $('#back-to-top').tooltip('show');
                   
+         });
     
     request.open('GET', '/get-articles', true);
     request.send(null);
