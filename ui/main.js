@@ -177,7 +177,7 @@ function loadArticles () {
         }
     };
          
-         $( document ).ready(function() {
+        ` $( document ).ready(function() {
 	// Handler for .ready() called.
 
 	$(window).scroll(function () {
@@ -200,6 +200,7 @@ function loadArticles () {
     $('#back-to-top').tooltip('show');
                   
          });
+	`
     
     request.open('GET', '/get-articles', true);
     request.send(null);
